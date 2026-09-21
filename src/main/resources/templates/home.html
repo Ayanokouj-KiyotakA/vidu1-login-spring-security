@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{layouts/layout :: head('Trang chủ')}"></head>
+<body>
+<header th:replace="~{fragments/header :: header}"></header>
+<main class="container">
+    <h1>Trang chủ</h1>
+    <p>
+        Xin chào
+        <strong th:if="${currentUser != null}" th:text="${currentUser.fullName}">User</strong>
+        <span th:unless="${currentUser != null}">khách</span>
+        !
+    </p>
+</main>
+</body>
+</html>
